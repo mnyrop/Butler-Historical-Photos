@@ -1,7 +1,3 @@
----
-layout: page
-title: Home
----
 <script defer="true" src="{{ site.baseurl }}/iiif_viewer/openseadragon/openseadragon.min.js"></script>
 <script>
 //<![CDATA[
@@ -24,7 +20,7 @@ iiif_viewerfuncs.push(
       id: "openseadragon{{ page.instancecounter }}",
       minZoomImageRatio: 1,
       prefixUrl: "{{ site.baseurl }}/iiif_viewer/openseadragon/images/",
-      tileSources: "https://derivativo-1.library.columbia.edu/iiif/2/ldpd:341167/info.json",
+      tileSources: "{{ page.iiif_json }}",
       crossOriginPolicy: false
     });
   }
