@@ -1,0 +1,40 @@
+
+title: CUL / DLC / Historical Photo
+#email: your-email@domain.com
+description: > #
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: jekyllrb
+#github_username:  jekyll
+#permalink: pretty
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+
+exclude: [ "Gemfile*" ]
+
+collections:
+    photos:
+      source: historical-photos.yml
+      output: true
+      yml_split: true
+      iiif: true
+      layout: photo-page
+      dir: photos
+      manifest: true
+      image: false
+
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+
+# CORS header for manifest after deployment
+# webrick:
+#   headers:
+#     "Access-Control-Allow-Origin": "*"

@@ -1,0 +1,13 @@
+---
+layout: page
+---
+<ul>
+  {% for photo in site.photos %}
+    <li>
+      <a href="{{ site.baseurl }}/photos/{{ photo.title | slugify }}">
+        <img src="{{ photo.native_jpg }}" style="max-width:300px"/>
+        <p>{{ photo.title }}</p>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

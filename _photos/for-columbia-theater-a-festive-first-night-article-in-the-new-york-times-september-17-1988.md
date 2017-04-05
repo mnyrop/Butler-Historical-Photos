@@ -1,0 +1,15 @@
+---
+_date: 17-Sep-88
+derivativo_link: https://derivativo-4.library.columbia.edu/iiif/2/cul:vt4b8gtj6x/
+dlc_link: https://dlc.library.columbia.edu/catalog/cul:mpg4f4qrtz
+format: clippings
+iiif_json: https://derivativo-4.library.columbia.edu/iiif/2/cul:vt4b8gtj6x/info.json
+name: Kozinn, Allan; New York times
+native_jpg: https://derivativo-4.library.columbia.edu/iiif/2/cul:vt4b8gtj6x/full/!768,768/0/native.jpg
+shelf_location: Box no. Box 11, Folder no. Folder 16, Buildings and Grounds
+subjects: Theaters; Columbia University
+summary: Photocopy of clipping from New York Times
+title: "'For Columbia Theater, A Festive First Night,' Article in the New York Times,
+  September 17, 1988."
+layout: photo-page
+---

@@ -1,0 +1,16 @@
+---
+_date: between 1934 and 2009
+derivativo_link: https://derivativo-4.library.columbia.edu/iiif/2/ldpd:341253/
+dlc_link: https://dlc.library.columbia.edu/catalog/cul:r7sqv9s51s
+format: photographs
+iiif_json: https://derivativo-4.library.columbia.edu/iiif/2/ldpd:341253/info.json
+name: Bubley, Esther
+native_jpg: https://derivativo-4.library.columbia.edu/iiif/2/ldpd:341253/full/!768,768/0/native.jpg
+shelf_location: Box no. Box 138, Folder no. Folder 11 (Administration - Provost -
+  Libraries, Butler, Rare book and Manuscript), Historical Photograph Collection
+subjects: Manuscripts (Papyri); Scholars; New York (N.Y.)
+summary: Two scholars (one of whom is Professor John Day) looking at papyrus with
+  magnifying glass in the Rare Book and Manuscript Library.
+title: Examining Papyrus
+layout: photo-page
+---

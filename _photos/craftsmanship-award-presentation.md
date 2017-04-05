@@ -1,0 +1,16 @@
+---
+_date: '1934'
+derivativo_link: https://derivativo-2.library.columbia.edu/iiif/2/ldpd:341247/
+dlc_link: https://dlc.library.columbia.edu/catalog/cul:bk3j9kd5cd
+format: photographs
+iiif_json: https://derivativo-2.library.columbia.edu/iiif/2/ldpd:341247/info.json
+name: Rothschild, Albert
+native_jpg: https://derivativo-2.library.columbia.edu/iiif/2/ldpd:341247/full/!768,768/0/native.jpg
+shelf_location: Box no. Box 185, Folder no. Folder 27 (Events - Awards - Craftsmanship
+  Award, 1934), Historical Photograph Collection
+subjects: Academic libraries; Award presentations; New York (N.Y.); Butler Library
+summary: President Nicholas Murray Butler handing out a Craftsmanship Award in front
+  of South Hall (Butler Library), 1934.
+title: Craftsmanship Award Presentation
+layout: photo-page
+---
