@@ -1,22 +1,90 @@
 ---
 layout: default
 ---
+<div id="photo-page-body">
+{% capture the_collection %}{{page.collection}}{% endcapture %}
+  {% if page.collection %}
+    {% assign documents = site[the_collection] %}
+  {% endif %}
+{% for link in documents  %}
+  {% if link.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+      {% assign prevtitle = prev.title %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = documents[forloop.index] %}
+      {% assign nexturl = next.url %}
+      {% assign nexttitle = next.title %}
+    {% endunless %}
+  {% endif %}
+  {% assign prev = link %}
+{% endfor %}
+
+<table class="prevnext">
+  <tr>
+    <td class="middle" id="obj-title" colspan="2"><h2>{{ page.title }}</h2></td>
+  </tr>
+  <tr>
+    <td class="left">{% if prevurl %}<b>Previous:</b></br><a href="{{site.baseurl}}{{prevurl}}" class="prev">{{prevtitle}}</a>{% endif %}</td>
+    <td class="right">{% if nexturl %}<b>Next:</b></br><a href="{{site.baseurl}}{{nexturl}}" class="next">{{nexttitle}}</a>{% endif %}</td>
+  </tr>
+</table>
+
 
 {% include osd_image.html %}
 
-<h4><b>Title:</b></h4>
-<p>{{ page.title }}</p>
-<h4><b>Date:</b></h4>
-<p>{{ page._date }}</p>
-<h4><b>Subjects:</b></h4>
-<p>{{ page.subjects }}</p>
-<h4><b>Summary:</b></h4>
-<p>{{ page.summary }}</p>
-<h4><b>DLC_Link:</b></h4>
-<p><a href="{{ page.dlc_link }}">{{ page.dlc_link }}</a></p>
-<h4><b>Format:</b></h4>
-<p>{{ page.format }}</p>
-<h4><b>Name:</b></h4>
-<p>{{ page.name }}</p>
-<h4><b>Shelf_location:</b></h4>
-<p>{{ page.shelf_location }}</p>
+
+<table class="data">
+
+  {% if page._date%}
+    <tr>
+      <td><b>Date:</b></td>
+      <td>{{ page._date }}</td>
+    </tr>
+  {% endif %}
+
+  {% if page.subjects%}
+    <tr>
+      <td><b>Subjects:</b></td>
+      <td>{{ page.subjects }}</td>
+    </tr>
+  {% endif %}
+
+  {% if page.summary%}
+    <tr>
+      <td><b>Summary:</b></td>
+      <td>{{ page.summary }}</td>
+    </tr>
+  {% endif %}
+
+  {% if page.dlc_link%}
+    <tr>
+      <td><b>DLC_Link:</b></td>
+      <td><a href="{{ page.dlc_link }}">{{ page.dlc_link }}</a></td>
+    </tr>
+  {% endif %}
+
+  {% if page.format%}
+    <tr>
+      <td><b>Format:</b></td>
+      <td>{{ page.format }}</td>
+    </tr>
+  {% endif %}
+
+  {% if page.name%}
+    <tr>
+      <td><b>Name:</b></td>
+      <td>{{ page.name }}</td>
+    </tr>
+  {% endif %}
+
+  {% if page.shelf_location%}
+    <tr>
+      <td><b>Shelf_location:</b></td>
+      <td>{{ page.shelf_location }}</td>
+    </tr>
+  {% endif %}
+
+</table>
+</div>

@@ -1,33 +1,8 @@
 ---
 layout: page
-title: Home
+menu_on: true
 ---
-<script defer="true" src="{{ site.baseurl }}/iiif_viewer/openseadragon/openseadragon.min.js"></script>
-<script>
-//<![CDATA[
-var iiif_viewerfuncs = [];
-window.onload = function() {
-  var arrayLength = iiif_viewerfuncs.length;
-  for (var i = 0; i < arrayLength; i++) {
-    iiif_viewerfuncs[i]();
-  }
-}
-//]]
-</script>
-<div id="openseadragon{{ page.instancecounter }}" class="iiif_image"
-style="width: 100%; height: 500px; border: 1px solid grey"></div>
-<script>
-//<![CDATA[
-iiif_viewerfuncs.push(
-  function initOpenSeadragon{{ page.instancecounter }}() {
-    OpenSeadragon({
-      id: "openseadragon{{ page.instancecounter }}",
-      minZoomImageRatio: 1,
-      prefixUrl: "{{ site.baseurl }}/iiif_viewer/openseadragon/images/",
-      tileSources: "https://derivativo-1.library.columbia.edu/iiif/2/ldpd:341167/info.json",
-      crossOriginPolicy: false
-    });
-  }
-)
-//]]>
-</script>
+
+{% include osd_image.html %}
+</br>
+<p><a href="/photos/{{ page.img_title | slugify }}">{{ page.img_title }}</a></br>{{ page.summary }}</p>

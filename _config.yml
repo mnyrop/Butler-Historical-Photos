@@ -1,7 +1,7 @@
 
-title: CUL / DLC / Historical Photo
+title: Butler Historical Photo Collection
 #email: your-email@domain.com
-description: > #
+description: A CUL Jekiiil Demo from DLC Image Server
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
@@ -10,6 +10,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Build settings
 markdown: kramdown
 theme: minima
+
 gems:
   - jekyll-feed
 

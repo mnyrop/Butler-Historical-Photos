@@ -1,0 +1,47 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+#openseadragon {
+  border: none !important;
+  background-color: #ccc;
+}
+
+#photo-page-body {
+  .prevnext { width: 100%; }
+  .data { width: 100%; }
+  .left { text-align: left; }
+  .right { text-align: right; }
+  .middle {
+    float: none;
+    text-align: center;
+    vertical-align: center;
+  }
+  table {
+    background-color: #fff;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 1px solid #bbb;
+    padding: 10px;
+    overflow-x: scroll;
+  }
+  td {
+    border: 1px solid #bbb;
+    padding: 10px;
+    overflow-x: scroll;
+  }
+  #obj-title {
+    font-weight: bolder;
+  }
+}
+
+.scroller{
+  tr {
+    max-width: 100%
+  }
+  td{
+    overflow-x: scroll;
+  }
+}
