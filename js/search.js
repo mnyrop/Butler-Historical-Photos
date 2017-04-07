@@ -1,21 +1,28 @@
 ---
-
+layout: null
 ---
 // Initialize lunr with the fields to be searched, plus the boost.
+
+
 var index = lunr(function () {
-  this.field('title')
-  this.field('description')
-  this.field('tag')
+  this.field('title').ignoreCase
+  this.field('summary').ignoreCase
+  this.field('format').ignoreCase
+  this.field('subjects').ignoreCase
+  this.field('name').ignoreCase
   this.ref('id')
 });
 
 {% assign count = 0 %}
 
-{% for collection_item in site.paper_gods %}
+{% for item in site.photos %}
   index.add({
-    title: {{ collection_item.title | jsonify }},
-    description: {{ collection_item.description | jsonify }},
-    tag: {{ collection_item.tag | jsonify }},
+    title: {{ item.title | jsonify }},
+    summary: {{ item.summary | strip_html |jsonify }},
+    format: {{ item.format | strip_html | jsonify }},
+    subjects: {{ item.subjects | strip_html | jsonify }},
+    name: {{ item.name | jsonify }},
+    link: {{ site.baseurl | append:item.url | jsonify }},
     id: {{count}}
   });
   {% assign count = count | plus: 1 %}
@@ -23,11 +30,13 @@ var index = lunr(function () {
 
 console.log( jQuery.type(index) );
 
-var store = [{% for collection_item in site.paper_gods %}{
-  'title': {{ collection_item.title | jsonify }},
-  'description': {{ collection_item.description | jsonify }},
-  'link': {{ site.baseurl | append:collection_item.url | jsonify }},
-  'tag': {{ collection_item.tag | jsonify }}
+var store = [{% for item in site.photos %}{
+  'title': {{ item.title | jsonify }},
+  'summary': {{ item.summary | strip_html | truncatewords: 36 | jsonify }},
+  'format': {{ item.format | strip_html | jsonify }},
+  'subjects': {{ item.subjects | strip_html | jsonify }},
+  'name': {{ item.name | jsonify }},
+  'link': {{ site.baseurl | append:item.url | jsonify }},
  }{% unless forloop.last %},{% endunless %}{% endfor %}
 ]
 
@@ -42,7 +51,7 @@ $(document).ready(function() {
     resultdiv.empty();
     for (var item in result) {
       var ref = result[item].ref;
-      var searchitem = '<div class="result"></br><a href="'+store[ref].link+' " class="post-title" style="font-size:1em;">'+store[ref].title+'</a><p>'+store[ref].description+'</p><p>#'+store[ref].tag+'</p></div>';
+      var searchitem = '<div class="result"></br><a href="'+store[ref].link+' " class="post-title" style="font-size:1em;">'+store[ref].title+'</a><p style="font-size:.8em"><i>'+store[ref].summary+'</i></p></div>';
 
       resultdiv.append(searchitem);
     }

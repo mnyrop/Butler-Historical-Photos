@@ -1,0 +1,207 @@
+<style>
+  .link {
+    stroke: #999;
+    opacity: 0.6;
+  }
+
+  .node circle {
+    stroke: #fff;
+    opacity: 0.6;
+    stroke-width: 1.5px;
+  }
+
+  /*text {
+    font-family: sans-serif;
+    opacity: 0.6;
+    pointer-events: none;
+  }*/
+  .d3-tip {
+    line-height: 1;
+    color: black;
+  }
+  #canvas {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    border: 1px grey solid;
+    margin: 0;
+  }
+</style>
+
+<svg id="canvas"></svg>
+
+<script src="https://d3js.org/d3.v3.js"></script>
+<script type='text/javascript' src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script>
+var links = [
+    { "source": "Alcove in Browsing Room", "target": "Wurts Bros. (New York, N.Y.)" },
+    { "source": "Banjo Club, 1894-95", "target": "Pach Brothers (Firm)" },
+    { "source": "'Banned Books' Display", "target": "Warman, Manny, -1983" },
+    { "source": "Binding Department", "target": "Ballou, Hubbard W." },
+    { "source": "Bonfire in Front of Butler Library", "target": "Hopp, Morris J." },
+    { "source": "Book Returns to Columbia Library After 178 Years", "target": "Warman, Manny, -1983" },
+    { "source": "Book Transfer", "target": "Boldtman, J." },
+    { "source": "Brander Matthews Hall", "target": "Gottscho, Samuel H. (Samuel Herman), 1875-1971" },
+    { "source": "Browsing Room", "target": "Bubley, Esther" },
+    { "source": "Business Library Reading Room", "target": "Warman, Manny, -1983" },
+    { "source": "Butler Library at Dusk", "target": "Warman, Manny, -1983" },
+    { "source": "Butler Library at Night", "target": "Alumni Federation of Columbia University" },
+    { "source": "Butler Library Construction 1", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 10", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 11", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 12", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 13", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 14", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 15", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 16", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 17", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 18", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 19", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 2", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 20", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 21", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 22", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 23", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 24", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 25", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 26", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 27", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 28", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 29", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 3", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 4", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 5", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 6", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 7", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 8", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Construction 9", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library Exterior Lamp", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library from Avery", "target": "Bogert, W.L." },
+    { "source": "Butler Library Front Door", "target": "Beals, A. Tennyson" },
+    { "source": "Butler Library - Looking West", "target": "Warman, Manny, -1983" },
+    { "source": "Butler Library - Main entrance mural", "target": "Look magazine" },
+    { "source": "Butler Library of Philosophy", "target": "Wurts Bros. (New York, N.Y.)" },
+    { "source": "Butler Library Painted Red", "target": "Associated Press" },
+    { "source": "Butler Library (South Hall) Completed", "target": "Beals, A. Tennyson" },
+    { "source": "Cataloging Librarian", "target": "Hartmann, Erich, 1922 July 29-; Magnum Photos" },
+    { "source": "Cataloging Room", "target": "Ballou, Hubbard W." },
+    { "source": "Catalogue Room", "target": "Wurts Bros. (New York, N.Y.)" },
+    { "source": "Ceiling-Butler Library", "target": "Wurts Bros. (New York, N.Y.)" },
+    { "source": "Checking Sources", "target": "Warman, Manny, -1983" },
+    { "source": "College Library Reading Room Artwork", "target": "Warman, Manny, -1983" },
+    { "source": "College Library Reading Room", "target": "Warman, Manny, -1983" },
+    { "source": "Columbia Bicentennial Display", "target": "Warman, Manny, -1983" },
+    { "source": "Columbia Encyclopedia Publication Party", "target": "Warman, Manny, -1983" },
+    { "source": "'Columbia' Gate", "target": "Bubley, Esther" },
+    { "source": "Craftsmanship Award Presentation", "target": "Rothschild, Albert" },
+    { "source": "Craftsmanship Award Winners", "target": "Rothschild, Albert" },
+    { "source": "Examining Papyrus", "target": "Bubley, Esther" },
+    { "source": "'For Columbia Theater, A Festive First Night,' Article in the New York Times, September 17, 1988.", "target": "Kozinn, Allan; New York times" },
+    { "source": "General View of Columbia University", "target": "Geo. P. Hall & Son" }
+];
+
+var nodes = {};
+
+// Compute the distinct nodes from the links.
+links.forEach(function(link) {
+  link.source = nodes[link.source] || (nodes[link.source] = {
+    name: link.source
+  });
+  link.target = nodes[link.target] || (nodes[link.target] = {
+    name: link.target,
+    is_tag: true
+  });
+});
+
+
+var force = d3.layout.force()
+  .size([800, 600])
+  .linkDistance(40)
+  .charge(-50)
+  .gravity(0.05)
+  .nodes(d3.values(nodes))
+  .links(links)
+  .on("tick", tick)
+  .start();
+
+var svg = d3.select("#canvas")
+  .attr("width", 800)
+  .attr("height", 600);
+
+
+//---Insert------
+//Set up tooltip
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-5, 0])
+    .html(function (d) {
+    return  d.name + "</span>";
+})
+svg.call(tip);
+//---End Insert---
+
+var link = svg.selectAll(".link")
+  .data(force.links())
+  .enter().append("line")
+  .attr("class", "link");
+
+var node = svg.selectAll(".node")
+  .data(force.nodes())
+  .enter().append("g")
+  .attr("class", "node")
+  .on('mouseover', tip.show) //Added
+  .on('mouseout', tip.hide)
+  .call(force.drag);
+
+
+node.append("circle")
+  .attr("r", 12)
+  .style("fill", function(d) {
+    if (d.is_tag) {
+      return "blue";
+    } else {
+      return "grey";
+    }
+  })
+
+// node.append("text")
+//   .attr("font-size", function(d) {
+//     if (d.is_tag) {
+//       return "16px";
+//     } else {
+//       return "10px";
+//     }
+//   })
+//   .attr("dy", ".35em")
+//     .style("fill", function(d) {
+//       if (d.is_tag) {
+//         return "blue";
+//       } else {
+//         return "black";
+//       }
+//   })
+//   .text(function(d) {
+//     return d.name;
+//   });
+
+  function tick() {
+    link.attr("x1", function(d) {
+        return d.source.x;
+      })
+      .attr("y1", function(d) {
+        return d.source.y;
+      })
+      .attr("x2", function(d) {
+        return d.target.x;
+      })
+      .attr("y2", function(d) {
+        return d.target.y;
+      });
+
+    node.attr("transform", function(d) {
+      return "translate(" + d.x + "," + d.y + ")";
+    });
+  }
+
+</script>

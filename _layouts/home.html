@@ -2,7 +2,13 @@
 layout: page
 menu_on: true
 ---
+<div class="standalone-image" style="width:100%;">
+  {% include osd_image.html %}
+  </br>
+  <p><a href="/photos/{{ page.img_title | slugify }}">{{ page.img_title }}</a></br>{{ page.summary }}</p>
+  </br>
+</div>
 
-{% include osd_image.html %}
-</br>
-<p><a href="/photos/{{ page.img_title | slugify }}">{{ page.img_title }}</a></br>{{ page.summary }}</p>
+{% include search.html %}
+
+{% include author-vis.html %}
