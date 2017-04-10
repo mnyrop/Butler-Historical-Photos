@@ -1,13 +1,13 @@
 ---
 layout: null
 ---
-{% capture nms %}{% for item in site.photos %}{% if item.name %}{{ item.name | strip_html | strip | strip_newlines }}^{% endif %}{% endfor %}{% endcapture %}
-{% assign namelist = nms | split: '^' | uniq %}
+{% capture tgs %}{% for item in site.photos %}{% if item.name %}{{ item.name | strip_html | strip | strip_newlines }}^{% endif %}{% endfor %}{% endcapture %}
+{% assign taglist = tgs | split: '^' | uniq %}
 {% capture linklist %}
   {% for item in site.photos %}
-    {% for name in namelist %}
+    {% for t in taglist %}
       {% for n in item.name %}
-        {% if n == name %}
+        {% if n == t %}
           {% capture link_temp %}
             { "source": {{ item.title | strip_newlines | strip_html | strip | jsonify }}, "target": {{ n | jsonify }} }^
           {% endcapture %}
@@ -25,10 +25,10 @@ layout: null
 {
   "nodes": [
     {% for item in site.photos %}
-      { "id": {{ item.title | strip_newlines | jsonify }} },
+      { "name": {{ item.title | strip_newlines | jsonify }}, "is_tag": "false", "url": "{{ site.baseurl }}/photos/{{ item.title | slugify }}" },
     {% endfor %}
-    {% for n in namelist %}
-      { "id": {{ n | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {% for t in taglist %}
+      { "name": {{ t | jsonify }}, "is_tag": "true", "url": "#" }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ],
   "links": [
