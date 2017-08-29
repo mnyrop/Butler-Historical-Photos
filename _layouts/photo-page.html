@@ -26,8 +26,8 @@ layout: default
     <td class="middle" id="obj-title" colspan="2"><h2>{{ page.title }}</h2></td>
   </tr>
   <tr>
-    <td class="left">{% if prevurl %}<b>Previous:</b></br><a href="{{site.baseurl}}{{prevurl}}" class="prev">{{prevtitle}}</a>{% endif %}</td>
-    <td class="right">{% if nexturl %}<b>Next:</b></br><a href="{{site.baseurl}}{{nexturl}}" class="next">{{nexttitle}}</a>{% endif %}</td>
+    <td class="left">{% if prevurl %}<b>Previous:</b></br><a href="{{site.url}}{{ prevurl }}" class="prev">{{prevtitle}}</a>{% endif %}</td>
+    <td class="right">{% if nexturl %}<b>Next:</b></br><a href="{{site.url}}{{ nexturl }}" class="next">{{nexttitle}}</a>{% endif %}</td>
   </tr>
 </table>
 
