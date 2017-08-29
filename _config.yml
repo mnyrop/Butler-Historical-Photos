@@ -2,17 +2,13 @@
 title: Butler Library Historical Photo Collection
 #email: your-email@domain.com
 description: A CUL Jekiiil Demo from DLC Image Server
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "/butler-historical-photos" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 #github_username:  jekyll
 #permalink: pretty
 # Build settings
 markdown: kramdown
 theme: minima
-
-gems:
-  - jekyll-feed
 
 exclude: [ "Gemfile*" ]
 
