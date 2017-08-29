@@ -118,7 +118,7 @@ function slugify(text) {
 links.forEach(function(link) {
   link.source = nodes[link.source] || (nodes[link.source] = {
     name: link.source,
-    url: "{{ site.baseurl }}/photos/" + slugify(link.source),
+    url: "{{ site.url }}/photos/" + slugify(link.source),
     is_tag: false
   });
   link.target = nodes[link.target] || (nodes[link.target] = {

@@ -1,0 +1,15 @@
+---
+_date: between 1934 and 2009
+derivativo_link: https://derivativo-1.library.columbia.edu/iiif/2/ldpd:341210/
+dlc_link: https://dlc.library.columbia.edu/catalog/cul:v9s4mw6mpd
+format: photographs
+iiif_json: https://derivativo-1.library.columbia.edu/iiif/2/ldpd:341210/info.json
+name: Bubley, Esther
+native_jpg: https://derivativo-1.library.columbia.edu/iiif/2/ldpd:341210/full/!768,768/0/native.jpg
+shelf_location: Box no. Box 162, Folder no. Folder 9 (Buildings & Grounds - Morningside
+  - Butler Library, Browsing Room), Historical Photograph Collection
+subjects: Academic libraries; College students; New York (N.Y.); Butler Library
+summary: '"Students in Butler Library''s Browsing Room."'
+title: Browsing Room
+layout: photo-page
+---

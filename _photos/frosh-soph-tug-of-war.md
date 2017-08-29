@@ -1,0 +1,15 @@
+---
+_date: between 1934 and 2009
+derivativo_link: https://derivativo-4.library.columbia.edu/iiif/2/ldpd:341020/
+dlc_link: https://dlc.library.columbia.edu/catalog/cul:gqnk98sfkv
+format: photographs
+iiif_json: https://derivativo-4.library.columbia.edu/iiif/2/ldpd:341020/info.json
+name: 
+native_jpg: https://derivativo-4.library.columbia.edu/iiif/2/ldpd:341020/full/!768,768/0/native.jpg
+shelf_location: Box no. Box 199, Folder no. Folder 23 (SASL-Traditions - Rushes, n.d.),
+  Historical Photograph Collection
+subjects: Academic libraries; New York (N.Y.); Butler Library
+summary: Tug of war for Soph-Frosh Rush taking place in front of Butler Library.
+title: Frosh-Soph Tug of War
+layout: photo-page
+---

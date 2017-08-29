@@ -56,7 +56,7 @@ html { overflow-y: scroll ; }
   <div class="grid-sizer"></div>
   {% for photo in site.photos %}
       <div class="grid-item">
-        <a href="{{ site.baseurl }}/photos/{{ photo.title | slugify }}">
+        <a href="{{ site.url }}/photos/{{ photo.title | slugify }}">
           <img src="{{ photo.native_jpg }}"/>
           <!--<div class="desc">{{ photo.title }}</div>-->
         </a>

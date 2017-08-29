@@ -1,5 +1,5 @@
 _site
+_plugins
 .sass-cache
 tiles
 .DS_Store
-_photos

@@ -1,0 +1,15 @@
+---
+_date: 6-Jun-32
+derivativo_link: https://derivativo-4.library.columbia.edu/iiif/2/ldpd:341272/
+dlc_link: https://dlc.library.columbia.edu/catalog/cul:47d7wm382c
+format: photographs
+iiif_json: https://derivativo-4.library.columbia.edu/iiif/2/ldpd:341272/info.json
+name: Beals, A. Tennyson
+native_jpg: https://derivativo-4.library.columbia.edu/iiif/2/ldpd:341272/full/!768,768/0/native.jpg
+shelf_location: Box no. Box 162, Folder no. Folder 11 (Buildings & Grounds - Morningside
+  - Butler Library, Construction 1932), Historical Photograph Collection
+subjects: Academic libraries; New York (N.Y.); Butler Library
+summary: Butler Library construction, 6 June 1932.
+title: Butler Library Construction 2
+layout: photo-page
+---

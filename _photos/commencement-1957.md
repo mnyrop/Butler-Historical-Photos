@@ -1,0 +1,15 @@
+---
+_date: '1957'
+derivativo_link: https://derivativo-4.library.columbia.edu/iiif/2/ldpd:341139/
+dlc_link: https://dlc.library.columbia.edu/catalog/cul:w0vt4b8h7f
+format: photographs
+iiif_json: https://derivativo-4.library.columbia.edu/iiif/2/ldpd:341139/info.json
+name: 
+native_jpg: https://derivativo-4.library.columbia.edu/iiif/2/ldpd:341139/full/!768,768/0/native.jpg
+shelf_location: Box no. Box 189, Folder no. Folder 13 (Events - Commencement - 1957),
+  Historical Photograph Collection
+subjects: Academic libraries; New York (N.Y.); Butler Library
+summary: View of Butler Library from Low Library entrance, during the 1957 commencement.
+title: Commencement 1957
+layout: photo-page
+---
