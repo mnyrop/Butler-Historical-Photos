@@ -6,7 +6,7 @@ permalink: pretty
 markdown: kramdown
 theme: minima
 
-exclude: [ "Gemfile*" ]
+exclude: [ "Gemfile*", "vendor" ]
 
 collections:
     photos:
