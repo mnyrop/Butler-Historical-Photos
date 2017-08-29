@@ -2,7 +2,7 @@
 title: Butler Library Historical Photo Collection
 #email: your-email@domain.com
 description: A CUL Jekiiil Demo from DLC Image Server
-url: "/butler-historical-photos" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/butler-historical-photos" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 #github_username:  jekyll
 #permalink: pretty
