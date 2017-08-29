@@ -1,0 +1,16 @@
+---
+_date: circa 1934
+derivativo_link: https://derivativo-2.library.columbia.edu/iiif/2/ldpd:340990/
+dlc_link: https://dlc.library.columbia.edu/catalog/cul:1c59zw3rdt
+format: photographs
+iiif_json: https://derivativo-2.library.columbia.edu/iiif/2/ldpd:340990/info.json
+name: Wurts Bros. (New York, N.Y.)
+native_jpg: https://derivativo-2.library.columbia.edu/iiif/2/ldpd:340990/full/!768,768/0/native.jpg
+shelf_location: '"Box no. Box 162, Folder no. Folder 7 (Buildings & Grounds - Morningside
+  - Butler library, Album ''The New Library building of Columbia University, Gift
+  of Edward S. Harkness,1934''), Historical Photograph Collection"'
+subjects: Academic libraries; Card catalogs; New York (N.Y.); Butler Library
+summary: View of patrons consulting the card catalog in the Catalogue Room, ca. 1934.
+title: Catalogue Room
+layout: photo-page
+---

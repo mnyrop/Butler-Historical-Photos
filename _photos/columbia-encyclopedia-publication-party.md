@@ -1,0 +1,16 @@
+---
+_date: between 1934 and 2009
+derivativo_link: https://derivativo-2.library.columbia.edu/iiif/2/ldpd:341070/
+dlc_link: https://dlc.library.columbia.edu/catalog/cul:98sf7m0ctg
+format: photographs
+iiif_json: https://derivativo-2.library.columbia.edu/iiif/2/ldpd:341070/info.json
+name: Warman, Manny, -1983
+native_jpg: https://derivativo-2.library.columbia.edu/iiif/2/ldpd:341070/full/!768,768/0/native.jpg
+shelf_location: Box no. Box 129, Folder no. Folder 2 (Academics - Affiliated Institutions
+  - Columbia University Press), Historical Photograph Collection
+subjects: Academic libraries; New York (N.Y.)
+summary: Professor Tyndall and Dwight Miner at the publication party for the Columbia
+  Encyclopedia.
+title: Columbia Encyclopedia Publication Party
+layout: photo-page
+---

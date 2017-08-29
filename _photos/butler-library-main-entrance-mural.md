@@ -1,0 +1,17 @@
+---
+_date: between 1934 and 2009
+derivativo_link: https://derivativo-1.library.columbia.edu/iiif/2/ldpd:340972/
+dlc_link: https://dlc.library.columbia.edu/catalog/cul:8cz8w9gj7n
+format: photographs
+iiif_json: https://derivativo-1.library.columbia.edu/iiif/2/ldpd:340972/info.json
+name: Look magazine
+native_jpg: https://derivativo-1.library.columbia.edu/iiif/2/ldpd:340972/full/!768,768/0/native.jpg
+shelf_location: Box no. Box 162, Folder no. Folder 15 (Buildings & Grounds - Morningside
+  - Butler Library, Interior w/ People), Historical Photograph Collection
+subjects: Academic libraries; Mural painting and decoration; New York (N.Y.); Butler
+  Library
+summary: Man and woman on bench in front of the main entrance mural of Athene painted
+  by  Eugene Savage of the Yale School of Fine Arts. Attributed to Look Magazine
+title: Butler Library - Main entrance mural
+layout: photo-page
+---
