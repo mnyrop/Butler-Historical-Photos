@@ -1,5 +1,5 @@
 
 source "https://rubygems.org"
-gem "jekyll", "3.4.3"
-gem 'github-pages'
+gem "jekyll", "3.5.2"
+gem "minima"
 gem 'html-proofer'
