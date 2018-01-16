@@ -1,12 +1,27 @@
-<div class="search" style="width:100%;background-color: #bbb;">
-  <div style="padding:20px">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="{{ site.url }}/js/lunr.js"></script>
-    <script src="{{ site.url }}/js/search.js"></script>
-    <h4>Explore the Collection</h4>
-    <input placeholder="Search..." type="search" id="search" class="search-input" style="width:200px;font-size: 16px;border:1px black solid;padding:0;">
-    <br/><br/>
-    <div id="results" class="result"></div>
-  </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="{{ site.baseurl }}/js/elasticlunr.min.js"></script>
+<script src="{{ site.baseurl }}/js/lunr-index.js"></script>
+<script src="{{ site.baseurl }}/js/lunr-ui.js"></script>
+
+<style>
+  .search table{width:100%;margin-top:30px;border:1px grey solid;}
+  #search-icon{width:8%;}
+  #input-box{width:92%}
+  #search{width:100%;border:none;font-size:14px;}
+  #results{margin:30px;}
+</style>
+
+<div class="search">
+  <table>
+    <tr>
+      <td id="search-icon">
+        <span class="icon">&#x1F50D;</span>
+      </td>
+      <td id="input-box">
+        <input type="text" class="searchTerm" id="search" placeholder="Browse the collection...">
+      </td>
+    </tr>
+  </table>
 </div>
-<div style="height:50px"></div>
+<div id="results"></div>

@@ -1,20 +1,30 @@
 
 title: Butler Library Historical Photo Collection
 description: A CUL Jekiiil Demo from DLC Image Server
-url: "http://mnyrop.github.io/historical-photos"
+
+url: ""
+baseurl: "/historical-photos"
 permalink: pretty
 markdown: kramdown
 theme: minima
 
-exclude: [ "Gemfile*", "vendor" ]
+exclude: [ "Gemfile*", "vendor", Rakefile, README.md ]
 
 collections:
     photos:
-      source: historical-photos.yml
-      output: true
-      yml_split: true
-      iiif: true
+      source: photos.csv
       layout: photo-page
-      dir: photos
-      manifest: true
-      image: false
+      directory: photos
+
+lunr:
+  content: false
+  meta:
+    - dir: "photos"
+      fields:
+        - pid
+        - title
+        - _date
+        - format
+        - name
+        - subjects
+        - summary

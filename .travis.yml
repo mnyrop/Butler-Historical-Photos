@@ -2,8 +2,8 @@ language: ruby
 rvm:
   - 2.4
 script:
-  - bundle exec jekyll build
-  - bundle exec htmlproofer ./_site --only-4xx --check-html --allow_hash_href --disable_external --alt-ignore '/.*/'
+  - bundle exec jekyll build -d _site/historical-photos
+  - bundle exec rake wax:test
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer

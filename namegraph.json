@@ -25,7 +25,7 @@ layout: null
 {
   "nodes": [
     {% for item in site.photos %}
-      { "name": {{ item.title | strip_newlines | jsonify }}, "is_tag": "false", "url": "{{ site.baseurl }}/photos/{{ item.title | slugify }}" },
+      { "name": {{ item.title | strip_newlines | jsonify }}, "is_tag": "false", "url": "{{ site.baseurl }}/photos/{{ item.title | slugify }}/" },
     {% endfor %}
     {% for t in taglist %}
       { "name": {{ t | jsonify }}, "is_tag": "true", "url": "#" }{% unless forloop.last %},{% endunless %}
