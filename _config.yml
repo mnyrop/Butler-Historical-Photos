@@ -22,9 +22,9 @@ lunr:
     - dir: "photos"
       fields:
         - pid
-        - title
+        - _title
         - _date
-        - format
-        - name
-        - subjects
-        - summary
+        - _format
+        - _name
+        - _subjects
+        - _summary
