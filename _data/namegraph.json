@@ -1,0 +1,31 @@
+---
+layout: null
+---
+{%- capture tgs -%}{%- for item in site.data.photos -%}{%- if item._name -%}{{ item._name | strip_html | strip | strip_newlines }}^{%- endif -%}{%- endfor -%}{%- endcapture -%}
+{%- assign taglist = tgs | split: '^' | uniq -%}
+{%- capture linklist -%}
+  {%- for item in site.data.photos -%}
+    {%- for t in taglist -%}
+      {%- if item._name == t  -%}
+        {%- capture link_temp -%}
+          { "source": {{ item.pid | jsonify }}, "target": {{ item._name | slugify | jsonify }} }^
+        {%- endcapture -%}
+        {%- if link_temp != "" -%}
+          {{ linklist | append: link_temp }}
+        {%- endif -%}
+        {%- assign link_temp = "" -%}
+      {%- endif- %}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign link_array = linklist | strip | split: "^" -%}
+{% capture my_json %}
+{
+  "links": [
+    {%- for link in link_array -%}
+      {{ link | strip | strip_newlines }}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+{% endcapture %}
+{{ my_json | strip }}

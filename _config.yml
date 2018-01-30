@@ -7,6 +7,7 @@ baseurl: "/historical-photos"
 permalink: pretty
 markdown: kramdown
 theme: minima
+lunr_language: false
 
 exclude: [ "Gemfile*", "vendor", Rakefile, README.md ]
 
@@ -15,16 +16,6 @@ collections:
       source: photos.csv
       layout: photo-page
       directory: photos
-
-lunr:
-  content: false
-  meta:
-    - dir: "photos"
-      fields:
-        - pid
-        - _title
-        - _date
-        - _format
-        - _name
-        - _subjects
-        - _summary
+      lunr_index:
+        content: false
+        fields: [pid, title, _date, format, _name, subjects, summary]

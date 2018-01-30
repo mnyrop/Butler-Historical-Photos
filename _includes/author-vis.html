@@ -36,72 +36,226 @@
 <script type='text/javascript' src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script>
 
-var links = [
-    { "source": "Alcove in Browsing Room", "target": "Wurts Bros. (New York, N.Y.)" },
-    { "source": "Banjo Club, 1894-95", "target": "Pach Brothers (Firm)" },
-    { "source": "'Banned Books' Display", "target": "Warman, Manny, -1983" },
-    { "source": "Binding Department", "target": "Ballou, Hubbard W." },
-    { "source": "Bonfire in Front of Butler Library", "target": "Hopp, Morris J." },
-    { "source": "Book Returns to Columbia Library After 178 Years", "target": "Warman, Manny, -1983" },
-    { "source": "Book Transfer", "target": "Boldtman, J." },
-    { "source": "Brander Matthews Hall", "target": "Gottscho, Samuel H. (Samuel Herman), 1875-1971" },
-    { "source": "Browsing Room", "target": "Bubley, Esther" },
-    { "source": "Business Library Reading Room", "target": "Warman, Manny, -1983" },
-    { "source": "Butler Library at Dusk", "target": "Warman, Manny, -1983" },
-    { "source": "Butler Library at Night", "target": "Alumni Federation of Columbia University" },
-    { "source": "Butler Library Construction 1", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 10", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 11", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 12", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 13", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 14", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 15", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 16", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 17", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 18", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 19", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 2", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 20", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 21", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 22", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 23", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 24", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 25", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 26", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 27", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 28", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 29", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 3", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 4", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 5", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 6", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 7", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 8", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Construction 9", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library Exterior Lamp", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library from Avery", "target": "Bogert, W.L." },
-    { "source": "Butler Library Front Door", "target": "Beals, A. Tennyson" },
-    { "source": "Butler Library - Looking West", "target": "Warman, Manny, -1983" },
-    { "source": "Butler Library - Main entrance mural", "target": "Look magazine" },
-    { "source": "Butler Library of Philosophy", "target": "Wurts Bros. (New York, N.Y.)" },
-    { "source": "Butler Library Painted Red", "target": "Associated Press" },
-    { "source": "Butler Library (South Hall) Completed", "target": "Beals, A. Tennyson" },
-    { "source": "Cataloging Librarian", "target": "Hartmann, Erich, 1922 July 29-; Magnum Photos" },
-    { "source": "Cataloging Room", "target": "Ballou, Hubbard W." },
-    { "source": "Catalogue Room", "target": "Wurts Bros. (New York, N.Y.)" },
-    { "source": "Ceiling-Butler Library", "target": "Wurts Bros. (New York, N.Y.)" },
-    { "source": "Checking Sources", "target": "Warman, Manny, -1983" },
-    { "source": "College Library Reading Room Artwork", "target": "Warman, Manny, -1983" },
-    { "source": "College Library Reading Room", "target": "Warman, Manny, -1983" },
-    { "source": "Columbia Bicentennial Display", "target": "Warman, Manny, -1983" },
-    { "source": "Columbia Encyclopedia Publication Party", "target": "Warman, Manny, -1983" },
-    { "source": "'Columbia' Gate", "target": "Bubley, Esther" },
-    { "source": "Craftsmanship Award Presentation", "target": "Rothschild, Albert" },
-    { "source": "Craftsmanship Award Winners", "target": "Rothschild, Albert" },
-    { "source": "Examining Papyrus", "target": "Bubley, Esther" },
-    { "source": "'For Columbia Theater, A Festive First Night,' Article in the New York Times, September 17, 1988.", "target": "Kozinn, Allan; New York times" },
-    { "source": "General View of Columbia University", "target": "Geo. P. Hall & Son" }
-];
+  var links = [{
+    "source": "1",
+    "target": "warman-manny-1983"
+  }, {
+    "source": "2",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "3",
+    "target": "warman-manny-1983"
+  }, {
+    "source": "5",
+    "target": "warman-manny-1983"
+  }, {
+    "source": "6",
+    "target": "alumni-federation-of-columbia-university"
+  }, {
+    "source": "7",
+    "target": "kozinn-allan-new-york-times"
+  }, {
+    "source": "9",
+    "target": "geo-p-hall-son"
+  }, {
+    "source": "10",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "14",
+    "target": "ballou-hubbard-w"
+  }, {
+    "source": "15",
+    "target": "warman-manny-1983"
+  }, {
+    "source": "17",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "19",
+    "target": "janovsky-seymour"
+  }, {
+    "source": "20",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "21",
+    "target": "boldtman-j"
+  }, {
+    "source": "22",
+    "target": "warman-manny-1983"
+  }, {
+    "source": "23",
+    "target": "wurts-bros-new-york-n-y"
+  }, {
+    "source": "24",
+    "target": "sprague"
+  }, {
+    "source": "25",
+    "target": "bubley-esther"
+  }, {
+    "source": "27",
+    "target": "bubley-esther"
+  }, {
+    "source": "28",
+    "target": "look-magazine"
+  }, {
+    "source": "29",
+    "target": "boldtman-j"
+  }, {
+    "source": "30",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "33",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "35",
+    "target": "warman-manny-1983"
+  }, {
+    "source": "36",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "37",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "38",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "40",
+    "target": "gottscho-samuel-h-samuel-herman-1875-1971"
+  }, {
+    "source": "42",
+    "target": "wurts-bros-new-york-n-y"
+  }, {
+    "source": "43",
+    "target": "wurts-bros-new-york-n-y"
+  }, {
+    "source": "44",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "45",
+    "target": "warman-manny-1983"
+  }, {
+    "source": "46",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "47",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "48",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "51",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "52",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "53",
+    "target": "associated-press"
+  }, {
+    "source": "54",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "56",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "57",
+    "target": "rothschild-albert"
+  }, {
+    "source": "59",
+    "target": "rothschild-albert"
+  }, {
+    "source": "60",
+    "target": "bubley-esther"
+  }, {
+    "source": "61",
+    "target": "pach-brothers-firm"
+  }, {
+    "source": "64",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "65",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "66",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "67",
+    "target": "hartmann-erich-1922-july-29-magnum-photos"
+  }, {
+    "source": "68",
+    "target": "bubley-esther"
+  }, {
+    "source": "69",
+    "target": "warman-manny-1983"
+  }, {
+    "source": "70",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "71",
+    "target": "wurts-bros-new-york-n-y"
+  }, {
+    "source": "72",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "74",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "76",
+    "target": "sprague"
+  }, {
+    "source": "77",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "79",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "80",
+    "target": "warman-manny-1983"
+  }, {
+    "source": "81",
+    "target": "warman-manny-1983"
+  }, {
+    "source": "82",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "86",
+    "target": "wurts-bros-new-york-n-y"
+  }, {
+    "source": "87",
+    "target": "ballou-hubbard-w"
+  }, {
+    "source": "88",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "89",
+    "target": "wurts-bros-new-york-n-y"
+  }, {
+    "source": "90",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "91",
+    "target": "bogert-w-l"
+  }, {
+    "source": "92",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "93",
+    "target": "warman-manny-1983"
+  }, {
+    "source": "95",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "96",
+    "target": "hopp-morris-j"
+  }, {
+    "source": "97",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "99",
+    "target": "beals-a-tennyson"
+  }, {
+    "source": "100",
+    "target": "warman-manny-1983"
+  }]
 
 var nodes = {};
 

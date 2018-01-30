@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 <div id="photo-page-body">
 
@@ -9,23 +9,23 @@ layout: default
   {% if page._date%}
   <tr><td><b>Date:</b></td><td>{{ page._date }}</td></tr>
   {% endif %}
-  {% if page._subjects%}
-  <tr><td><b>Subjects:</b></td><td>{{ page._subjects }}</td></tr>
+  {% if page.subjects%}
+  <tr><td><b>Subjects:</b></td><td>{{ page.subjects }}</td></tr>
   {% endif %}
-  {% if page._summary%}
-  <tr><td><b>Summary:</b></td><td>{{ page._summary }}</td></tr>
+  {% if page.summary%}
+  <tr><td><b>Summary:</b></td><td>{{ page.summary }}</td></tr>
   {% endif %}
-  {% if page._dlc_link%}
-  <tr><td><b>DLC_Link:</b></td><td><a href="{{ page._dlc_link }}">{{ page._dlc_link }}</a></td></tr>
+  {% if page.dlc_link%}
+  <tr><td><b>DLC_Link:</b></td><td><a href="{{ page._dlc_link }}">{{ page.dlc_link }}</a></td></tr>
   {% endif %}
-  {% if page._format%}
-  <tr><td><b>Format:</b></td><td>{{ page._format }}</td></tr>
+  {% if page.format%}
+  <tr><td><b>Format:</b></td><td>{{ page.format }}</td></tr>
   {% endif %}
   {% if page._name%}
   <tr><td><b>Name:</b></td><td>{{ page._name }}</td></tr>
   {% endif %}
-  {% if page._shelf_location%}
-  <tr><td><b>Shelf_location:</b></td><td>{{ page._shelf_location }}</td></tr>
+  {% if page.shelf_location%}
+  <tr><td><b>Shelf_location:</b></td><td>{{ page.shelf_location }}</td></tr>
   {% endif %}
 </table>
 </div>
