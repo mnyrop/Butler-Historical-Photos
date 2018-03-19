@@ -14,8 +14,8 @@ exclude: [ "Gemfile*", "vendor", Rakefile, README.md ]
 collections:
     photos:
       source: photos.csv
+      output: true
       layout: photo-page
-      directory: photos
       lunr_index:
         content: false
         fields: [pid, title, _date, format, _name, subjects, summary]

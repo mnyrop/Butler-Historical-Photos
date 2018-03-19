@@ -1,22 +1,4 @@
----
-layout: none
----
-$.getJSON("{{ site.baseurl }}/js/lunr-index.json", function(index_json) {
-  window.index = new elasticlunr.Index;
-  window.store = index_json;
-  index.saveDocument(false);
-  index.setRef('lunr_id');
-  index.addField('pid');
-  index.addField('title');
-  index.addField('_date');
-  index.addField('format');
-  index.addField('_name');
-  index.addField('subjects');
-  index.addField('summary');
-  // add docs
-  for (i in store) {
-    index.addDoc(store[i]);
-  }
+$(document).ready(function() {
   $('input#search').on('keyup', function () {
     var results_div = $('#results');
     var query = $(this).val();
